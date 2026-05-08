@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV – Ashraf Abdalla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: #d6d0cb;
+            padding: 40px 20px;
+            color: #1a1a1a;
+        }
+
+        .page {
+            width: 820px;
+            margin: auto;
+            background: #fefefe;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            min-height: 1120px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+        }
+
+        /* ── LEFT COLUMN ── */
+        .left {
+            background: #1c2b2b;
+            color: #e8e0d5;
+            padding: 44px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 4px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 22px;
+            border: 3px solid #c9a96e;
+            background: #2a3a3a;
+        }
+
+        .left-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20pt;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.15;
+            letter-spacing: 0.5px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .left-title {
+            text-align: center;
+            font-size: 7.5pt;
+            color: #c9a96e;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .l-divider {
+            height: 1px;
+            background: #2e4040;
+            margin: 20px 0;
+        }
+
+        .l-section-title {
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #c9a96e;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .l-item {
+            font-size: 9pt;
+            font-weight: 300;
+            line-height: 1.9;
+            color: #b8b0a5;
+        }
+
+        .l-item strong {
+            color: #e8e0d5;
+            font-weight: 500;
+        }
+
+        .skill-bar-wrap {
+            margin-bottom: 10px;
+        }
+
+        .skill-label {
+            font-size: 8.5pt;
+            font-weight: 400;
+            color: #c8c0b5;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-bar {
+            height: 3px;
+            background: #2e4040;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #c9a96e, #e8c98a);
+            border-radius: 2px;
+        }
+
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 8.5pt;
+            padding: 5px 0;
+            border-bottom: 1px solid #243535;
+            color: #b8b0a5;
+        }
+
+        .lang-item:last-child { border-bottom: none; }
+        .lang-level { color: #c9a96e; font-weight: 500; }
+
+        .social-item {
+            font-size: 8.5pt;
+            padding: 5px 0;
+            color: #b8b0a5;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #243535;
+        }
+
+        .social-item:last-child { border-bottom: none; }
+        .social-count { color: #c9a96e; font-weight: 600; }
+
+        .qr-wrap {
+            margin-top: auto;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .qr-wrap img {
+            width: 90px;
+            border-radius: 4px;
+            opacity: 0.85;
+        }
+
+        .qr-label {
+            font-size: 6.5pt;
+            color: #4a5e5e;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 6px;
+            display: block;
+        }
+
+        /* ── RIGHT COLUMN ── */
+        .right {
+            padding: 44px 42px;
+        }
+
+        .r-name-block {
+            border-bottom: 2px solid #1c2b2b;
+            padding-bottom: 16px;
+            margin-bottom: 28px;
+        }
+
+        .r-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1c2b2b;
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+
+        .r-subtitle {
+            font-size: 9pt;
+            color: #c9a96e;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        .r-section {
+            margin-bottom: 28px;
+        }
+
+        .r-section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 13pt;
+            font-weight: 700;
+            color: #1c2b2b;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid #e0d8d0;
+            padding-bottom: 5px;
+            margin-bottom: 16px;
+        }
+
+        .profile-text {
+            font-size: 9.5pt;
+            line-height: 1.75;
+            color: #3a3a3a;
+            font-weight: 300;
+        }
+
+        .entry {
+            margin-bottom: 18px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .entry-title {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: #1c2b2b;
+        }
+
+        .entry-date {
+            font-size: 8pt;
+            color: #999;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .entry-org {
+            font-size: 8.5pt;
+            color: #c9a96e;
+            font-weight: 500;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .entry-body {
+            font-size: 9pt;
+            color: #555;
+            line-height: 1.65;
+            font-weight: 300;
+        }
+
+        .entry-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .entry-body ul li {
+            padding: 2px 0 2px 14px;
+            position: relative;
+        }
+
+        .entry-body ul li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: #c9a96e;
+        }
+
+        .ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .ref-card {
+            padding: 12px 14px;
+            background: #f7f4f0;
+            border-radius: 4px;
+            border-top: 3px solid #c9a96e;
+        }
+
+        .ref-name { font-size: 9.5pt; font-weight: 600; color: #1c2b2b; }
+        .ref-detail { font-size: 8.5pt; color: #666; font-weight: 300; line-height: 1.6; margin-top: 2px; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- LEFT -->
+    <div class="left">
+        <img src="file_00000000451071f5ba21d40ece4fbe74.jpg" class="photo" alt="Ashraf Abdalla">
+        <div class="left-name">Ashraf<br>Abdalla</div>
+        <div class="left-title">Virtual Assistant &amp; Digital Specialist</div>
+
+        <div class="l-divider"></div>
+
+        <div class="l-section-title">Contact</div>
+        <div class="l-item">
+            <strong>Location</strong><br>
+            Dagoretti, Nairobi, Kenya<br><br>
+            <strong>Phone</strong><br>
+            +254 785 117 163<br><br>
+            <strong>Email</strong><br>
+            ashrafabdalla0101@gmail.com<br><br>
+            <strong>Business Email</strong><br>
+            servicestribridge@gmail.com
+        </div>
+
+        <div class="l-divider"></div>
+
+        <div class="l-section-title">Languages</div>
+        <div class="lang-item"><span>English</span><span class="lang-level">Fluent</span></div>
+        <div class="lang-item"><span>French</span><span class="lang-level">Proficient</span></div>
+        <div class="lang-item"><span>Kiswahili</span><span class="lang-level">Fluent</span></div>
+
+        <div class="l-divider"></div>
+
+        <div class="l-section-title">Core Skills</div>
+        <div class="skill-bar-wrap">
+            <div class="skill-label"><span>HTML &amp; CSS</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Content Creation</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Google Workspace</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:84%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Social Media Management</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Email &amp; Admin Support</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Translation (EN/FR/SW)</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+        </div>
+
+        <div class="l-divider"></div>
+
+        <div class="l-section-title">Social Media Presence</div>
+        <div class="social-item"><span>Instagram</span><span class="social-count">1,700+ followers</span></div>
+        <div class="social-item"><span>Facebook</span><span class="social-count">400+ followers</span></div>
+        <div class="social-item"><span>TikTok</span><span class="social-count">200+ followers</span></div>
+
+        <div class="qr-wrap">
+            <img src="IMG-20260219-WA0002(1).jpg" alt="Portfolio QR Code">
+            <span class="qr-label">Portfolio</span>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <div class="r-name-block">
+            <div class="r-name">Ashraf Abdalla</div>
+            <div class="r-subtitle">Virtual Assistant &nbsp;·&nbsp; Digital Content &nbsp;·&nbsp; Administration</div>
+        </div>
+
+        <div class="r-section">
+            <div class="r-section-title">Profile</div>
+            <p class="profile-text">
+                A motivated and detail-oriented young professional with a strong foundation in digital content creation, administrative support, and community engagement. Founder of TriBridge Services, with practical experience managing correspondence, organizing workflows, and producing online content. Multilingual (English, French, Kiswahili), with an active social media presence and a genuine commitment to reliable, independent work.
+            </p>
+        </div>
+
+        <div class="r-section">
+            <div class="r-section-title">Experience</div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Founder &amp; Administrator</div>
+                    <div class="entry-date">2024 — Present</div>
+                </div>
+                <div class="entry-org">TriBridge Services · Nairobi, Kenya</div>
+                <div class="entry-body">
+                    <ul>
+                        <li>Managed client communications, email inquiries, and scheduling independently.</li>
+                        <li>Created and updated web content using HTML and CSS for client platforms.</li>
+                        <li>Coordinated service delivery timelines and maintained organized digital records.</li>
+                        <li>Offered translation and localization services across English, French, and Kiswahili.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Social Media Content Manager</div>
+                    <div class="entry-date">2024 — Present</div>
+                </div>
+                <div class="entry-org">Personal Brand · Multi-Platform</div>
+                <div class="entry-body">
+                    <ul>
+                        <li>Grew an engaged audience of 1,700+ on Instagram, 400+ on Facebook, and 200+ on TikTok.</li>
+                        <li>Planned, created, and published regular content across platforms.</li>
+                        <li>Managed community interaction and responded to follower engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Peer Counsellor (Volunteer)</div>
+                    <div class="entry-date">2024</div>
+                </div>
+                <div class="entry-org">Community Practice · Nairobi</div>
+                <div class="entry-body">Applied counselling and active listening skills to peer support, gaining practical experience in empathetic communication and community-centred engagement.</div>
+            </div>
+        </div>
+
+        <div class="r-section">
+            <div class="r-section-title">Education &amp; Qualifications</div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Kenya Certificate of Secondary Education (KCSE)</div>
+                    <div class="entry-date">2022 — 2025</div>
+                </div>
+                <div class="entry-org">Njoro Boys High School · Grade: C+ &nbsp;|&nbsp; AGP: 51</div>
+                <div class="entry-body">Notable grades: English B+, Chemistry B−, French B−. Strong performance in language and communication subjects.</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Counselling Skills Certificate</div>
+                    <div class="entry-date">July 2024</div>
+                </div>
+                <div class="entry-org">Professional Certification</div>
+                <div class="entry-body">Training in psychological support, active listening, and mental health advocacy.</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">HTML Coding — Advanced Proficiency</div>
+                    <div class="entry-date">January 2026</div>
+                </div>
+                <div class="entry-org">Professional Achievement</div>
+                <div class="entry-body">Recognised expertise in modern HTML architecture and web design standards.</div>
+            </div>
+        </div>
+
+        <div class="r-section">
+            <div class="r-section-title">Referees</div>
+            <div class="ref-grid">
+                <div class="ref-card">
+                    <div class="ref-name">Elizabeth Wanyoike</div>
+                    <div class="ref-detail">School Counsellor<br>Njoro Boys High School<br>0754 683 495</div>
+                </div>
+                <div class="ref-card">
+                    <div class="ref-name">Jackob Haywood Ondiko</div>
+                    <div class="ref-detail">French Mentor<br>Njoro Boys High School<br>0712 062 375</div>
+                </div>
+                <div class="ref-card">
+                    <div class="ref-name">Mogaka Stephen</div>
+                    <div class="ref-detail">Class Teacher<br>Njoro Boys High School<br>0723 229 142</div>
+                </div>
+                <div class="ref-card">
+                    <div class="ref-name">Victor Ouma Juma</div>
+                    <div class="ref-detail">School Nurse<br>Njoro Boys High School</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
